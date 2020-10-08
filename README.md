@@ -1,27 +1,25 @@
-# Covid19
+# Coronavirus Memorial Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+A memorial website in honor of those who have passed away from the coronavirus - https://coronavirus-memorial.herokuapp.com
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Responsive web app. App features include:
+  * Memorial section - 
+    - List of memorials
+    - Each person has his own memorial page 
+    - Each memorial page has a tributes section. You can add a tribute to the person ("Light a candle")
+    - Option to add your own memorial page for a person who has passed away
+  * Statistics section - 
+    - List of all countries and their statistics of the coronavirus (Total cases of coronavirus, total deaths etc.)
+    - Search countries
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Tech and Frameworks
+  * Angular 8
+  * RxJS
+  * Node.js
+  * Express
+  * Mongoose
+  * MongoDB
+  * Angular Material
+  * Bootstrap
