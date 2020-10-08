@@ -1,0 +1,105 @@
+<div class="dialog-add">
+  <h2>Share Their Story</h2>
+  <form [formGroup]="addPersonForm" *ngIf="!submit" (ngSubmit)="onSubmit()">
+    <button class="close" mat-raised-button matDialogClose>X</button>
+    <div class="form-wrapper">
+      <div>
+        <div class="row">
+          <div class="col-4">
+            <mat-form-field appearance="legacy">
+              <mat-label>Name</mat-label>
+              <input matInput type="text" formControlName="firstName" required>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="legacy">
+              <mat-label>Last Name</mat-label>
+              <input matInput type="text" formControlName="lastName" required>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="legacy">
+              <mat-label>Country</mat-label>
+              <select matNativeControl (change)="chooseCountry($event.target.value)" formControlName="country" required>
+                <option value=""></option>
+                <option *ngFor="let country of countries" value="{{country.name}}">{{country.name}}</option>
+              </select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field class="example-full-width">
+              <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="pickerBirth" placeholder="Date of Birth"
+                formControlName="dateBirth">
+              <mat-datepicker-toggle matSuffix [for]="pickerBirth"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #pickerBirth></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="example-full-width">
+              <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="pickerDeath"
+                placeholder="Date of Passing" formControlName="dateDie" required>
+              <mat-datepicker-toggle matSuffix [for]="pickerDeath"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #pickerDeath></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <mat-form-field appearance="legacy">
+              <mat-label>About</mat-label>
+              <textarea matInput type="text" rows="7" formControlName="lifeSummary"
+                placeholder="Tell us about your loved one"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-6">
+            <mat-form-field appearance="legacy">
+              <mat-label> Your email</mat-label>
+              <input matInput type="email" formControlName="email" required>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field appearance="legacy">
+              <mat-label>Create a password</mat-label>
+              <input matInput type="password" formControlName="password" required>
+            </mat-form-field>
+          </div>
+        </div> -->
+      </div>
+      <div class="image-container">
+        <div class="uploaded-img">
+          <img *ngIf="imgSrc" [src]="imgSrc" alt="Upload picture of the person to thr memorial page">
+        </div>
+        <div class="upload-img-input">
+          <label for="file-upload" class="mat-raised-button custom-file-upload">Upload
+            Image</label>
+          <input id="file-upload" type="file" (change)="onFileChange($event)" required>
+        </div>
+        <p class="photo-error-msg" *ngIf="!image">* Please Add a Photo</p>
+      </div>
+    </div>
+    <div>
+      <div class="actions">
+        <button mat-raised-button class="btn-submit" type="submit">Add to Memorial</button>
+         <p class="disclaimer">By submitting to this site you agree and understand we are not legally responsible for any damage or harm following your submission, and not responsible for any false information. 
+           You agree that you are a family member or have been given permission by a family member of the deceased to post on this site.</p>
+      </div>
+    </div>
+  </form>
+  <div class="sending" *ngIf=submit>
+    <div *ngIf="sending" class="spinner-container">
+      <app-mat-spinner-overlay>
+      </app-mat-spinner-overlay>
+    </div>
+    <div class="response" *ngIf="error">
+      <button mat-raised-button (click)="backToAddPersonForm()"><i class="material-icons">arrow_back</i></button>
+      <div>
+        <h4>{{ message }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<app-google-analytics-gtag></app-google-analytics-gtag>

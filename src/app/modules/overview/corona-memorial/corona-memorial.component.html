@@ -1,0 +1,18 @@
+<div class="memorial-list">
+  <app-memorial-list *ngIf="!person"
+    [memorialPeopleList]="memorialPeople"
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    (showPersonMemorial)="getPersonMemorial($event)"
+    (refreshPage)="getMemorialList()"
+    ></app-memorial-list>
+</div>
+<div class="memorial-page" *ngIf="person">
+  <app-memorial-page 
+    [person]="person" 
+    [tributes]="memorialTributes" 
+    (reset)="backToMemorialList($event)"
+    (refreshMemorialPage)=" getTributesList()">
+  </app-memorial-page>
+</div>
+<app-google-analytics-gtag></app-google-analytics-gtag>

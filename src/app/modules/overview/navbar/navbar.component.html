@@ -1,0 +1,54 @@
+<nav>
+  <a routerLink="about">
+    <div class="title-container">
+      <h3>Coronavirus-Remember.com</h3>
+      <p>Keeping the memory alive</p>
+    </div>
+  </a>
+  <div class="overview-wrapper">
+    <div class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="about">
+        Home
+      </a>
+    </div>
+    <div class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="memorial">
+        Memorial Page
+      </a>
+    </div>
+    <div class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="coronavirus-status">
+        Statistics
+      </a>
+    </div>
+    <div class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="contact">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="menu">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu class="navMenu" #menu="matMenu">
+      <div mat-menu-item class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="about">
+          Home
+        </a>
+      </div>
+      <div mat-menu-item class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="memorial">
+          Memorial Page
+        </a>
+      </div>
+      <div mat-menu-item class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="coronavirus-status">
+          Statistics
+        </a>
+      </div>
+      <div mat-menu-item class="navbar-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="contact">Contact Us</a>
+      </div>
+    </mat-menu>
+  </div>
+</nav>

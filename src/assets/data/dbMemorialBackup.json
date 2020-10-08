@@ -1,0 +1,134 @@
+[
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Mario",
+        "lastName": "Speedwagon",
+        "country": "Italy",
+        "flag": "it",
+        "dateBirth": "29/3/1958",
+        "dateDie": "6/1/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Anna",
+        "lastName": "Anna",
+        "country": "China",
+        "flag": "cn",
+        "dateBirth": "19/9/1978",
+        "dateDie": "6/1/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Peter",
+        "lastName": "Cruiser",
+        "country": "Italy",
+        "flag": "it",
+        "dateBirth": "1/1/1990",
+        "dateDie": "9/2/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Paul",
+        "lastName": "Molive",
+        "country": "Italy",
+        "flag": "it",
+        "dateBirth": "6/7/1943",
+        "dateDie": "12/3/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Anna",
+        "lastName": "Mull",
+        "country": "Germany",
+        "flag": "de",
+        "dateBirth": "30/7/1980",
+        "dateDie": "12/12/2019",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Gail",
+        "lastName": "Forcewind",
+        "country": "Switzerland",
+        "flag": "ch",
+        "dateBirth": "18/4/1975",
+        "dateDie": "01/12/2019",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Mario",
+        "lastName": "Speedwagon",
+        "country": "Italy",
+        "flag": "it",
+        "dateBirth": "29/3/1958",
+        "dateDie": "6/1/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Anna",
+        "lastName": "Sthesia",
+        "country": "China",
+        "flag": "cn",
+        "dateBirth": "19/9/1978",
+        "dateDie": "6/1/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Petey",
+        "lastName": "Cruiser",
+        "country": "Italy",
+        "flag": "it",
+        "dateBirth": "1/1/1990",
+        "dateDie": "9/2/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Paul",
+        "lastName": "Molive",
+        "country": "Italy",
+        "flag": "it",
+        "dateBirth": "6/7/1943",
+        "dateDie": "12/3/2020",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Anna",
+        "lastName": "Mull",
+        "country": "Germany",
+        "flag": "de",
+        "dateBirth": "30/7/1980",
+        "dateDie": "12/12/2019",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    },
+    {
+        "portrait": "memorial-candle.jpeg",
+        "firstName": "Gail",
+        "lastName": "Forcewind",
+        "country": "Switzerland",
+        "flag": "ch",
+        "dateBirth": "18/4/1975",
+        "dateDie": "01/12/2019",
+        "lifeSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coronaSummery": ""
+    }
+]

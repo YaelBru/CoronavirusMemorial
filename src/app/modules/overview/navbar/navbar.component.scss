@@ -1,0 +1,125 @@
+app-navbar {
+  display: block;
+  height: fit-content;
+
+  nav {
+    // box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  a,
+  a:hover {
+    text-decoration: none;
+    color: initial;
+  }
+
+  h3,
+  p {
+    width: fit-content;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../../../assets/hand1.jpeg");
+    background-repeat: no-repeat;
+    background-size: 47px;
+    background-position: left top 3px;
+    outline: none;
+    cursor: pointer;
+
+    >p {
+      margin: 0 0 0 60px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    color: #000000;
+    padding-left: 60px;
+    margin-bottom: 2px;
+  }
+
+  .active-link {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 8px;
+    font-weight: 600;
+  }
+
+  .overview-wrapper {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: auto 15px;
+    padding: 8px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  // .card-body {
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  // }
+
+  // .card-body-home {
+  //   background-image: url("../../../../assets/HomeIcon.svg");
+  //   height: 100%;
+  // }
+
+  // .card-body-status {
+  //   background-image: url("../../../../assets/StatusIcon.svg");
+  //   height: 100%;
+  // }
+
+  // .card-body-memorial {
+  //   background-image: url("../../../../assets/MemorialIcon.svg");
+  //   height: 100%;
+  // }
+}
+
+
+@media only screen and (max-width: 900px) {
+  app-navbar {
+
+    .title-container {
+      margin-right: auto;
+    }
+
+    .navbar-item {
+     margin: auto 8px; 
+    }
+
+    .navbar-item a {
+      font-size: 14px;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  app-navbar {
+    height: fit-content;
+
+    .menu {
+      display: block;
+      width: 35px;
+      margin: auto 20px;
+    }
+
+    .overview-wrapper {
+      display: none;
+    }
+
+  }
+}

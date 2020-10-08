@@ -1,0 +1,45 @@
+app-overview {
+  display: block;
+  height: 100%;
+  overflow-y: hidden;
+  grid-template-areas:
+    'navbar navbar navbar navbar'
+    'main main main main'
+    'main main main main'
+    'main main main main';
+  grid-template-rows: 20% auto auto auto;
+  background-image: url(/assets/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  app-navbar {
+    grid-area: navbar;
+    position: sticky;
+    z-index: 1;
+  }
+
+  main {
+    grid-area: main;
+    height: calc(100% - #{71px});
+    display: block;
+    overflow-y: auto;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  app-overview {
+    overflow-x: hidden;
+
+    app-navbar {
+      z-index: 1001;
+    }
+
+    main {
+      width: 100vw;
+      padding: 0;
+      height: calc(100% - #{180px});
+    }
+  }
+}

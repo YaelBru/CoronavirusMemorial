@@ -1,0 +1,40 @@
+<div class="memorial-list-container">
+  <div class="memorial-header">
+    <h2>Remember Them</h2>
+    <p class="memorial-header-subtitle">This virtual memorial is dedicated to all the people who passed away from the
+      coronavirus. Honor and remember each person not just as a number, but as a person with stories and a legacy.</p>
+    <button mat-raised-button (click)="openDialog()">Add a Memorial</button>
+  </div>
+  <div class="loading" *ngIf="!memorialPeopleList.length">
+    <div *ngIf="isLoading" class="spinner-container">
+      <app-mat-spinner-overlay>
+      </app-mat-spinner-overlay>
+    </div>
+    <div *ngIf="errorMessage">
+      <h4>{{errorMessage}}</h4>
+    </div>
+  </div>
+  <div class="memorial-wrapper" *ngIf="memorialPeopleList.length && !errorMessage">
+    <mat-card class="memorial-card" *ngFor="let person of memorialPeopleList">
+      <a class="link-to-memorial" (click)="showPerson(person)" type="button"
+        title="Read more about {{person?.firstName}}">
+        <img class="memorial-image" src='{{person.file}}' alt="Portrait of {{person.firstName}}">
+        <div class="card-content">
+          <div class="title">
+            <img class="flag" src="/assets/flags/4x3/{{person.flag}}.svg"
+              alt="Flag of {{person.country}}">
+            <h5>
+          {{ person.firstName }} {{ person.lastName }}
+            </h5>
+          </div>
+          <div class="card-info">
+            <span class="date-of-death">
+              Passed away: {{ person.dateDie | date : 'mediumDate'}}
+            </span>
+          </div>
+        </div>
+      </a>
+    </mat-card>
+  </div>
+</div>
+<app-google-analytics-gtag></app-google-analytics-gtag>

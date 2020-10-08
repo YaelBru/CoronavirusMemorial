@@ -1,0 +1,122 @@
+<div class="memorial-page-container">
+  <div class="wrapper">
+    <button mat-button class="back-btn" (click)="backToMemorialList()" matTooltip="Back To Memorial List"><i
+        class="material-icons">arrow_back</i></button>
+    <div class="person-memorial">
+
+      <img class="portrait" src="{{person.file}}"
+        alt="Portrait of {{person.firstName}}">
+      <div class="about">
+        <div class="about-header">
+          <h2>{{ person.firstName}} {{ person.lastName }} </h2>
+          <p class="dates">{{ person.dateBirth | date: 'mediumDate' }} 
+            {{ person.dateDie | date: 'mediumDate' }}</p>
+          <img src="/assets/flags/4x3/{{person.flag}}.svg" alt="Flag of {{person.country}}">
+          <span>{{ person.country }}</span>
+        </div>
+        <div class="life-summary">
+          {{ person.lifeSummary  }}
+          <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum. -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tribute Form -->
+  <ng-template #tributeForm>
+    <mat-dialog-content class="add-tribute">
+      <div class="header"> 
+        <h2>Add Your Tribute</h2>
+        <button class="close" mat-raised-button matDialogClose>X</button>
+      </div>
+      <form [formGroup]="addTributeForm" *ngIf="!submit" (ngSubmit)="addTribute()">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field appearance="legacy">
+              <mat-label for="name">Your name</mat-label>
+              <input matInput id="name" type="text" formControlName="initiator" required>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field appearance="legacy">
+              <mat-label for="country">Country</mat-label>
+              <select matNativeControl (change)="chooseCountry($event.target.value)" formControlName="country" required>
+                <option value=""></option>
+                <option *ngFor="let country of countries" value="{{country.name}}">{{country.name}}</option>
+              </select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <mat-form-field appearance="legacy">
+              <mat-label for="tribute">Write a Tribute (Optional)</mat-label>
+              <textarea matInput id="tribute" formControlName="text"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <button class="btn btn-submit" type="submit"><i class="material-icons">fireplace</i></button>
+      </form>
+      <div class="sending" *ngIf=submit>
+        <div *ngIf="sending" class="spinner-container">
+          <app-mat-spinner-overlay>
+          </app-mat-spinner-overlay>
+        </div>
+        <div class="response" *ngIf="error">
+         <h3 class="message">{{ message }}</h3>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
+  <!-- /Tribute Form -->
+
+  <div class="tributes-section">
+    <mat-list class="tributes">
+      <div class="tributes-header">
+        <h4 class="candles-header">Soul Candles</h4>
+        <button mat-raised-button class="add-tribute-btn" (click)="openDialog()">Light a candle</button>
+      </div>
+      <mat-list-item>
+        <ul>
+          <li>
+            <div class="tribute-header">
+              <img src="../../../../../assets/flags/4x3/eu.svg" alt="Image of all flags of the world">
+              <h6>Humanity</h6>
+              <span class="date-container">{{person.createdAt | date : 'medium'}} </span>
+            </div>
+          </li>
+          <li>
+            <div class="tribute-content">
+              <p>Rest In Peace</p>
+              <img src="../../../../../assets/tribute-candle.jpg" alt="Image of a burning memorial candle">
+            </div>
+          </li>
+        </ul>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+      <mat-list-item *ngFor="let tribute of tributes">
+        <ul>
+          <li>
+            <div class="tribute-header">
+              <img src="/assets/flags/4x3/{{tribute.flag}}.svg" alt="Flag of {{tribute.flag}}">
+              <h6>From {{ tribute.initiator }}</h6>
+              <span class="date-container">{{tribute.createdAt | date : 'medium'}} </span>
+            </div>
+          </li>
+          <li>
+            <div class="tribute-content">
+              <p>{{ tribute.text || defaultMsg }} </p>
+              <img src="/assets/tribute-candle.jpg" alt="Image of a burning memorial candle">
+            </div>
+          </li>
+        </ul>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+<app-google-analytics-gtag></app-google-analytics-gtag>

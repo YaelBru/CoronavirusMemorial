@@ -1,0 +1,443 @@
+app-memorial-page {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  .memorial-page-container {
+    display: grid;
+    grid-template-columns: auto auto auto 450px;
+    grid-template-rows: 75px auto auto;
+    grid-template-areas:
+      '. . . .'
+      'content content content tributes'
+      'content content content tributes';
+    height: 99%;
+    margin: 0px 65px;
+  }
+
+  .back-btn {
+    position: absolute;
+    top: 13%;
+    left: 2%;
+    background-color: #ffffffe6;
+  }
+
+  .wrapper {
+    grid-area: content;
+    margin-left: 20px;
+  }
+
+  .person-memorial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .portrait {
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 2px rgba(204, 204, 204, 0.5);
+    width: 200px;
+    height: 250px;
+    margin: 12px 20px 0;
+  }
+
+  .about {
+    width: 500px;
+    padding: 11px 25px 0;
+
+    img {
+      width: 35px;
+      height: 25px;
+      border-radius: 5px;
+      margin: 13px 10px 13px 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    color: #868e96;
+    font-size: 17px;
+    margin: 10px 0;
+    width: fit-content;
+  }
+
+  .life-summary {
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+
+  .add-tribute-btn:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08),
+      0 0 15px 0 rgba(0, 0, 0, .02),
+      0 0 20px 4px rgba(0, 0, 0, .06);
+  }
+
+  .add-tribute-btn {
+    font-size: 12px;
+    font-weight: 600 !important;
+  }
+
+  .tributes-section {
+    grid-area: tributes;
+    margin: 0px auto;
+    position: relative;
+    max-height: 76vh;
+    overflow: auto;
+    width: 450px;
+  }
+
+  .tributes {
+    overflow: auto;
+    padding-top: 0px;
+  }
+
+  .tributes-header {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(140deg, #616161, #a2a2a2);
+    color: #ffffff;
+    padding: 20px;
+
+    .add-tribute-btn:hover {
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08),
+        0 0 15px 0 rgba(0, 0, 0, .02),
+        0 0 20px 4px rgba(0, 0, 0, .06);
+    }
+  }
+
+  mat-list-item {
+    margin: 20px auto;
+    padding: 5px 10px !important;
+    height: fit-content !important;
+  }
+
+  ul {
+    list-style: none;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .tribute-header {
+    display: flex;
+    flex-direction: row;
+
+    h6 {
+      margin-right: 15px;
+    }
+
+    >img {
+      width: 25px;
+      height: 20px;
+      box-shadow: 0px 1px 2px 1px rgba(204, 204, 204, 0.5);
+      margin-right: 15px;
+    }
+
+    >span {
+      color: #868e96;
+      font-size: 13px;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+  }
+
+  .tribute-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 11px;
+
+    img {
+      width: 95px;
+      height: 100px;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px 3px rgba(204, 204, 204, 0.5);
+    }
+
+    p {
+      margin-right: 23px;
+      width: 70%;
+    }
+
+    .date-container {
+      margin-left: auto;
+    }
+  }
+
+  .candles-header {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+  }
+}
+
+.add-tribute {
+  display: block;
+  height: 100%;
+  background-color: rgba(171, 170, 170, 0.47);
+  background-image: url(../../../../../assets/hand1234.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 700px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {
+    margin: 22px 14px;
+    padding: 5px 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 5px rgba(46, 46, 46, 0.8);
+    letter-spacing: normal;
+    color: #ffffff;
+    width: fit-content;
+  }
+
+  form {
+    padding: 8px 0;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .mat-focused .mat-form-field-label {
+    color: white !important;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .mat-form-field-label {
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    color: white !important;
+  }
+
+  .mat-form-field-underline {
+    background-color: white !important;
+  }
+
+  .mat-form-field-ripple {
+    background-color: #ffffff !important;
+  }
+
+  input,
+  textarea {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+    color: white;
+  }
+
+  select {
+    color: white; 
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+
+    option {
+      color: black; 
+    }
+  }
+
+  .btn-submit {
+    background: linear-gradient(150deg, #deb9aabd, #dc5b00);
+    color: #ffffff;
+    width: 60px;
+    height: 50px;
+    margin-top: 30px;
+
+    .material-icons {
+      font-size: 34px;
+    }
+  }
+
+  .btn-submit:hover {
+    border: 1px solid #eee;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, .08)
+  }
+
+  .close {
+    margin: 14px 20px;
+    height: 37px;
+    color: #ffffff;
+  }
+
+  .spinner-container {
+    width: fit-content;
+    margin: 60px auto 0;
+  }
+
+  .response {
+    text-align: center;
+    height: 200px;
+    padding-top: 30px;
+
+    h3 {
+      color: #ffffff;
+      padding: 10px;
+      margin: auto;
+      text-shadow: 0px 1px 5px rgba(46, 46, 46, 0.8);
+    }
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1340px) {
+  app-memorial-page {
+    .memorial-page-container {
+      margin: 0px 22px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .person-memorial {
+      width: 87%;
+      margin: 37px auto 0;
+    }
+
+    .portrait {
+      margin-top: 30px;
+    }
+
+    .life-summary {
+      margin: 5px auto 35px;
+      height: 230px;
+    }
+
+    .tributes-section {
+      position: static;
+      height: fit-content;
+      overflow: unset;
+      width: 70%;
+    }
+
+    .mat-list-item {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  app-memorial-page {
+
+    .memorial-page-container {
+      height: initial;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      margin-left: 0;
+    }
+
+    .person-memorial {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .portrait {
+      margin-top: 41px;
+    }
+
+    .about {
+      padding: 11px 25px 26px;
+    }
+
+    .about-header {
+      text-align: center;
+    }
+
+    .life-summary {
+      max-height: 25vh;
+    }
+
+    p {
+      margin: 10px auto 0;
+      width: auto;
+    }
+
+    .tributes-section {
+      width: 461px;
+    }
+
+    .mat-list-item {
+      width: 100%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  app-memorial-page {
+
+    .memorial-page-container {
+      margin: 0;
+      display: block;
+    }
+
+    .back-btn {
+      top: 19%;
+    }
+
+    .person-memorial {
+      width: 100%;
+      padding: 20px 10px;
+      flex-direction: column;
+    }
+
+    .portrait {
+      margin: 26px auto 5px;
+    }
+
+    .about {
+      width: 100%;
+      padding: 11px 0 0;
+    }
+
+    .tributes-section {
+      width: 93%;
+    }
+  }
+
+  .add-tribute {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+
+    form {
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin: 35px 0 30px;
+      padding: 5px 0px 0 17px;
+      font-size: 23px;
+    }
+
+    .btn-submit {
+      margin-top: 25px;
+    }
+
+    .response {
+      padding-top: 0;
+
+      h3 {
+        margin: 22px 0 0 0;
+      }
+    }
+
+    .close {
+      width: 64px;
+
+    }
+  }
+}

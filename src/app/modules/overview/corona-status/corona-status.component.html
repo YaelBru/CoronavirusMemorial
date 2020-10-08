@@ -1,0 +1,36 @@
+<mat-card class="statistics">
+  <div class="statistics-title">Total Confirmed Cases <span class="total-color">{{ totalCases | number }}</span></div>
+  <div class="statistics-title">Deaths <span class="new-death"> {{ totalDeaths | number }}</span></div>
+  <div class="statistics-title">Critical ILL <span class="new-cases"> {{ criticalIll | number }}</span></div>
+</mat-card>
+<div class="table-container">
+  <p class="last-updated">Last updated: April 9, 2020 GMT</p>
+  <table class="table">
+    <thead>
+      <th scope="col" class="country">
+        <span> Country </span>
+        <input #inputField (keyup)="search(inputField)" class="search-input" type="text"
+               placeholder="Search Country...">
+      </th>
+      <th scope="col">Total Cases</th>
+      <th class="hide-in-mobile" scope="col">New Cases</th>
+      <th scope="col">Total Deaths</th>
+      <th scope="col">New Deaths</th>
+      <th class="hide-in-mobile" scope="col">Critically Ill</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let country of filteredCountries">
+      <td class="country-flag-wrapper">
+        <img src="/assets/flags/4x3/{{country.countryFlag}}.svg" alt="">
+        <span>{{ country.country }}</span>
+      </td>
+      <td>{{ country.totalCases }}</td>
+      <td class="new-cases hide-in-mobile">{{ country.newCases }}</td>
+      <td>{{ country.totalDeath }}</td>
+      <td class="new-death">{{ country.newDeath }}</td>
+      <td class="hide-in-mobile">{{ country.seriousCritical }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-google-analytics-gtag></app-google-analytics-gtag>
